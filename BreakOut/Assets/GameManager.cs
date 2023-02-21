@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     public void instantStar()
     {
         float random;
-        random = Random.Range(-2.5f, 2.5f); 
+        random = Random.Range(-2.05f, 2.05f); 
         Debug.Log(random);
         Instantiate(star, new Vector2(random, 5.3f), Quaternion.identity);
         instTime = Random.Range(4, 10);

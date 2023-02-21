@@ -7,10 +7,7 @@ public class racketController : MonoBehaviour
     public float limitx = 2.1f;
     public float speed= 2f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -23,7 +20,7 @@ public class racketController : MonoBehaviour
         var position = transform.position;
         if (Input.touchCount > 0)
         {
-            position.x = Input.touches[0].deltaPosition.x* Time.deltaTime*0.1f;
+            position.x = Input.touches[0].deltaPosition.x* Time.deltaTime*0.3f;
             transform.Translate(position.x ,0,0);
         }
         else
@@ -32,10 +29,6 @@ public class racketController : MonoBehaviour
             position.x = Mathf.Clamp(position.x,-limitx,+limitx);
             transform.position = position;
         }
-        
-
-        
-
-        
+ 
     }
 }
